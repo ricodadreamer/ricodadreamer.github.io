@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jerk BKK</title>
+  <title>JerkBKK | Coming Soon</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-
     * {
       margin: 0;
       padding: 0;
@@ -15,81 +14,96 @@
 
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #000;
+      background: radial-gradient(circle at top, #111 0%, #000 100%);
       color: #fff;
+      height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
+      overflow: hidden;
       text-align: center;
-      padding: 20px;
     }
 
-    img.logo {
-      width: 220px;
+    .logo {
+      width: 180px;
       max-width: 80%;
-      height: auto;
-      margin-bottom: 20px;
+      animation: fadeInDown 1.2s ease forwards;
     }
 
     h1 {
-      font-size: 2.2rem;
-      color: #ff4b2b;
-      margin-bottom: 10px;
+      font-size: 3rem;
+      color: #f44336;
+      letter-spacing: 2px;
+      margin-top: 20px;
+      animation: fadeInUp 1.2s ease forwards;
     }
 
-    p.tagline {
+    .tagline {
+      color: #ffcc33;
       font-size: 1.1rem;
-      color: #f4f4f4;
-      margin-bottom: 30px;
+      margin-top: 10px;
+      animation: fadeInUp 1.6s ease forwards;
     }
 
-    .btn {
-      display: inline-block;
-      background-color: #ff4b2b;
-      color: #fff;
-      padding: 12px 28px;
-      border-radius: 6px;
-      text-decoration: none;
+    .coming-soon {
+      margin-top: 20px;
+      font-size: 1.5rem;
       font-weight: 600;
-      transition: background 0.3s ease;
+      color: #fff;
+      animation: fadeInUp 2s ease forwards;
     }
 
-    .btn:hover {
-      background-color: #ff704d;
+    .glow {
+      color: #f44336;
+      text-shadow: 0 0 8px #f44336, 0 0 15px #f44336;
     }
 
     footer {
       position: absolute;
       bottom: 15px;
+      color: #777;
       font-size: 0.9rem;
-      color: #aaa;
     }
 
-    @media (max-width: 600px) {
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+      .coming-soon {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo {
+        width: 140px;
+      }
       h1 {
         font-size: 1.8rem;
       }
-
-      p.tagline {
+      .tagline {
         font-size: 1rem;
-      }
-
-      .btn {
-        padding: 10px 20px;
       }
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="Jerk BKK Logo" class="logo" />
-  <h1>JERK BKK</h1>
-  <p class="tagline">Bangkok’s Boldest Jerk Chicken</p>
-  <a href="https://www.instagram.com/jerk.bkk" target="_blank" class="btn">Follow Us on Instagram</a>
-
-  <footer>
-    © 2025 Jerk BKK. All rights reserved.
-  </footer>
+  <img src="IMG_0425.jpeg" alt="JerkBKK Logo" class="logo" />
+  <h1>JerkBKK</h1>
+  <p class="tagline">Authentic Jamaican Jerk in the Heart of Bangkok</p>
+  <p class="coming-soon"><span class="glow">🔥 Coming Soon 🔥</span></p>
+  <footer>© 2025 JerkBKK. All Rights Reserved.</footer>
 </body>
 </html>
